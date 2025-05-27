@@ -1,0 +1,23 @@
+export PATH=$PATH:"/home/${USER}/.local/bin"
+
+python3 -m pip install google-adk==0.5.0
+
+python3 -m pip install -r adk_to_agent_engine/requirements.txt
+
+cd adk_to_agent_engine
+
+Change ENV file
+
+python3 test_agent_app_locally.py
+
+date
+
+python3 deploy_to_agent_engine.py
+
+date
+
+
+python3 query_app_on_agent_engine.py
+
+- Greet user and tell them you can help them about workspaces
+- If they want you list the workspace then use the tool list_all_workspaces defined in the agent
