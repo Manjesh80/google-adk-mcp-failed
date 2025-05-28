@@ -17,7 +17,7 @@ remote_app = agent_engines.create(
     display_name=os.getenv("APP_NAME", "Workspace Agent"),
     agent_engine=root_agent,
     requirements=[
-        "google-adk==0.5.0",
+        "git+https://github.com/google/adk-python.git@main",
         "google-cloud-aiplatform[agent_engines]"
     ],
     extra_packages=[
